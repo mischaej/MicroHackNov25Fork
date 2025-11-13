@@ -33,7 +33,7 @@ param windowsAdminPassword string?
 
 param windowsAdminUserName string?
 
-//var userName = contains(deployer().userPrincipalName, '@') ? substring(deployer().userPrincipalName, 0, indexOf(deployer().userPrincipalName, '@')) : deployer().userPrincipalName
+var userName = contains(deployer().userPrincipalName, '@') ? substring(deployer().userPrincipalName, 0, indexOf(deployer().userPrincipalName, '@')) : deployer().userPrincipalName
 
 //temp fix for max character lenght on keyvault names
 //var namingPrefix = '${Prefix}-${userName}'
