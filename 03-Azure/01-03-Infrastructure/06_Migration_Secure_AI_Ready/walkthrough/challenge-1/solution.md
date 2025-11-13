@@ -33,7 +33,7 @@ Duration: 30 minutes
 - Clone the MicroHack Github repository using the following command
 
 ```bash
-git clone https://github.com/microsoft/MicroHack.git
+git clone https://github.com/mischaej/MicroHackNov25Fork.git
 ```
 
 ![image](./img/CS4.png)
