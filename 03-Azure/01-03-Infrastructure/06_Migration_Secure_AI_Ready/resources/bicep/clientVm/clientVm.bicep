@@ -84,7 +84,9 @@ param enableAzureSpotPricing bool = false
 
 var userName = contains(deployer().userPrincipalName, '@') ? substring(deployer().userPrincipalName, 0, indexOf(deployer().userPrincipalName, '@')) : deployer().userPrincipalName
 
-var namingPrefix = '${Prefix}-${userName}'
+//temp fix for max character length on Windows machine names
+//var namingPrefix = '${Prefix}-${userName}'
+var namingPrefix = '${Prefix}'
 
 @description('The name of your Virtual Machine')
 var vmName string = '${namingPrefix}-HV'
