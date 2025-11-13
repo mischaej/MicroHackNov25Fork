@@ -33,11 +33,11 @@ param windowsAdminPassword string?
 
 param windowsAdminUserName string?
 
-var userName = contains(deployer().userPrincipalName, '@') ? substring(deployer().userPrincipalName, 0, indexOf(deployer().userPrincipalName, '@')) : deployer().userPrincipalName
+//var userName = contains(deployer().userPrincipalName, '@') ? substring(deployer().userPrincipalName, 0, indexOf(deployer().userPrincipalName, '@')) : deployer().userPrincipalName
 
 //temp fix for max character lenght on keyvault names
 //var namingPrefix = '${Prefix}-${userName}'
-var namingPrefix = '${Prefix}'
+var namingPrefix = $Prefix
 
 @description('Name of the VNet')
 var virtualNetworkName string = '${namingPrefix}-Source-VNet'
